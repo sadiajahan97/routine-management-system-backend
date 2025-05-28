@@ -15,11 +15,11 @@ export async function deleteRoutine(id: string) {
 }
 
 export async function findAllRoutines() {
-  await prismaClient.routine.findMany();
+  return await prismaClient.routine.findMany();
 }
 
 export async function findRoutine(id: string) {
-  await prismaClient.routine.findUnique({ where: { id } });
+  return await prismaClient.routine.findUnique({ where: { id } });
 }
 
 export async function updateRoutine(
