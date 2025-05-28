@@ -1,0 +1,19 @@
+{
+  "name": "routine-management-system-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.23",
+    "dotenv": "^16.5.0",
+    "prisma": "^6.8.2",
+    "typescript": "^5.8.3"
+  }
+}

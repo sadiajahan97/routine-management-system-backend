@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Type {
+  INTENSE_MODE
+  MOCK_TEST
+  REGULAR
+}
+
+model Routine {
+  chapter   String
+  createdAt DateTime @default(now())
+  date      String
+  endTime   String
+  id        String   @id @default(cuid())
+  startTime String
+  subject   String
+  type      Type
+  updatedAt DateTime @updatedAt
+}
