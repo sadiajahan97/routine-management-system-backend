@@ -1,3 +1,4 @@
+import cors from "cors";
 import express, { json } from "express";
 import { PORT } from "./config";
 import {
@@ -9,6 +10,7 @@ import {
 } from "./controllers";
 
 const app = express();
+app.use(cors());
 app.use(json());
 app.post("/routines", handleCreateRoutine);
 app.delete("/routines/:id", handleDeleteRoutine);
